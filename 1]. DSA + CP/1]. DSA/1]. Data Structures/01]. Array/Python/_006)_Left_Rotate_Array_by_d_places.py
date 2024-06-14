@@ -4,6 +4,26 @@ d = 3
 #ans = [40,50,10,20,30]
 #left rotate by 3
 
+def left_rotate_once(arr):
+    tmp = arr[0]
+
+    for index in range(1, len(arr)):
+        arr[index - 1] = arr[index]
+
+    arr[-1] = tmp
+
+def left_rotate(arr, num):
+    for _ in range(num):
+        left_rotate_once(arr)
+
+arr = [1, 2, 3, 4, 5]
+num = 3
+
+print("Before Left Rotation:", arr)
+
+left_rotate(arr, num)
+print("After '3' Left Rotations:", arr)
+=====================================================================================
 # method 2 slicing 
 print(l[d:]+l[0:d])
 
