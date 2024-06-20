@@ -1,4 +1,5 @@
 # Given a non-negative integer number n, convert n into equivalent binary number.
+# take the floor division of the quotient and then take the remainder of the recursive function inputs ( dividing the no by half)
 def toBinary(n):
     
     if n <= 1:
